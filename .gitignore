@@ -1,0 +1,13 @@
+# Secrets and local developer configuration
+.env
+.env.local
+.env.*.local
+
+# JavaScript build/dependency artifacts
+node_modules/
+.next/
+.npm-cache/
+
+# Python artifacts from the original placeholder app
+__pycache__/
+*.py[cod]
