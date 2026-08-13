@@ -16,11 +16,21 @@ Phase 1 foundation is in progress. The application is not yet ready to deploy. S
 
 ## Repository map
 
+- `apps/web/` â€” responsive Next.js web interface; all current market values are visibly marked as demo data.
 - `docs/architecture.md` â€” system boundaries and event pipeline.
 - `docs/ai-safety.md` â€” required AI output, validation, and user language.
 - `docs/data-sources.md` â€” provider and licensing rules.
 - `docs/database.md` â€” entity definitions and billing semantics.
 - `supabase/migrations/` â€” PostgreSQL database migrations.
+
+## Run the interface locally
+
+1. Install Node.js 22 or later from https://nodejs.org.
+2. In a terminal, open the `apps/web` folder.
+3. Run `npm install`, then `npm run dev`.
+4. Open the local address shown in the terminal (normally `http://localhost:3000`).
+
+The current interface is a Phase 2 visual foundation. It deliberately has no login or real data connection yet.
 
 ## Financial safety notice
 
