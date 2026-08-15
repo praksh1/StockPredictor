@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const watchlist = [
   { ticker: "NVDA", name: "NVIDIA", price: "$184.22", change: "+2.81%", tone: "positive", signal: "Bullish" },
   { ticker: "AAPL", name: "Apple", price: "$228.54", change: "+0.42%", tone: "neutral", signal: "Watching" },
@@ -11,7 +13,7 @@ export default function Home() {
       <nav className="nav" aria-label="Primary navigation">
         <a className="brand" href="#top"><span>âŒ</span> MarketPulse <b>AI</b></a>
         <div className="nav-links"><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#disclaimer">Safety</a></div>
-        <div className="nav-actions"><button className="text-button">Sign in</button><button className="button small">Start free</button></div>
+        <div className="nav-actions"><Link className="text-button" href="/login">Sign in</Link><Link className="button small" style={{ textDecoration: "none" }} href="/signup">Start free</Link></div>
       </nav>
 
       <section id="top" className="hero">
@@ -19,7 +21,7 @@ export default function Home() {
           <p className="eyebrow"><i /> MARKET INTELLIGENCE, NOT PREDICTIONS</p>
           <h1>Know what matters<br /><em>before</em> the market reacts.</h1>
           <p className="lede">MarketPulse AI monitors the events affecting the stocks you follow, then turns the signal into a clear, cited assessment.</p>
-          <div className="hero-actions"><button className="button">Start free <span>â†’</span></button><button className="button ghost">See how it works</button></div>
+          <div className="hero-actions"><Link className="button" style={{ textDecoration: "none" }} href="/signup">Start free <span>â†’</span></Link><a className="button ghost" href="#how">See how it works</a></div>
           <p className="micro">No credit card required for the private beta. Delayed U.S. quotes.</p>
         </div>
         <div className="alert-card" aria-label="Example AI assessment">
