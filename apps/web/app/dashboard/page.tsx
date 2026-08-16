@@ -22,6 +22,9 @@ export default function DashboardPage() {
     const supabase = createClient();
     const { data: auth } = await supabase.auth.getUser();
     if (!auth.user) { window.location.assign("/login"); return; }
+    const { data: profile, error: profileError } = await supabase.from("profiles").select("onboarding_completed_at").eq("id", auth.user.id).maybeSingle();
+    if (profileError) throw profileError;
+    if (!profile?.onboarding_completed_at) { window.location.assign("/onboarding"); return; }
     setEmail(auth.user.email ?? "MarketPulse member");
     let { data: list } = await supabase.from("watchlists").select("id").eq("user_id", auth.user.id).order("created_at").limit(1).maybeSingle();
     if (!list) {
