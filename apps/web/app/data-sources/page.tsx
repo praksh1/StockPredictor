@@ -1,0 +1,7 @@
+import Link from "next/link";
+import "../legal.css";
+
+export default function DataSourcesPage() {
+  return <div className="legal-page"><header><Link className="brand" href="/"><span>MP</span> MarketPulse <b>AI</b></Link><Link className="text-button" href="/dashboard">My watchlist</Link></header><main><p className="eyebrow">DATA STATUS</p><h1>Clear source and data rules.</h1><p className="legal-callout"><strong>Currently available: SEC EDGAR source documents.</strong>The starter catalog can link directly to recent official SEC filings after the administrator contact email is configured.</p><h2>Available in the free beta</h2><p>SEC EDGAR filings are retrieved directly from the U.S. Securities and Exchange Commission and linked back to the original record. These filings are source documents, not an AI interpretation or a market signal.</p><h2>Not connected yet</h2><p>Live or delayed prices, company news, earnings transcripts, and AI-generated market assessments are not connected in this beta. MarketPulse AI will not substitute demo data for those services.</p><h2>Provider standards</h2><p>Any future market-data or news provider must permit the intended display, alerting, storage, and AI-processing use. Provider name, source link, retrieval time, and applicable display delay will be disclosed with the relevant data.</p><h2>What you will see</h2><p>Every live price will name its provider and delay. Every assessment will link to supporting sources and distinguish sourced facts from AI interpretation.</p></main></div>;
+}
+
