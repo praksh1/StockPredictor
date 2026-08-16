@@ -1,0 +1,10 @@
+.legal-page{min-height:100vh;background:var(--paper)}
+.legal-page header{height:78px;padding:0 max(24px,calc((100vw - 960px)/2));display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:#fff}
+.legal-page main{max-width:800px;margin:0 auto;padding:72px 24px 96px}
+.legal-page h1{font-size:clamp(38px,6vw,60px);letter-spacing:-2.6px;margin:0 0 18px}
+.legal-page h2{font-size:24px;letter-spacing:-.6px;margin:42px 0 12px}
+.legal-page p,.legal-page li{color:var(--muted);line-height:1.7}
+.legal-page ul{padding-left:21px}
+.legal-callout{background:#edf8f0;border:1px solid #bee0c8;border-radius:10px;padding:18px 20px;color:#176b46}
+.legal-callout strong{display:block;color:var(--ink);margin-bottom:5px}
+
